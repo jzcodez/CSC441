@@ -1,0 +1,41 @@
+{
+  "reviews": {
+    "validator": {
+      "$jsonSchema": {
+        "bsonType": "object",
+        "required": ["productId", "productName", "name", "rating", "comment", "createdAt"],
+        "properties": {
+          "productId": { "bsonType": "int", "minimum": 1, "description": "id of the product in MySQL" },
+          "productName": { "bsonType": "string" },
+          "name": { "bsonType": "string", "minLength": 2, "maxLength": 60 },
+          "rating": { "bsonType": "int", "minimum": 1, "maximum": 5 },
+          "comment": { "bsonType": "string", "minLength": 10, "maxLength": 1000 },
+          "createdAt": { "bsonType": "date" }
+        }
+      }
+    },
+    "indexes": [
+      { "key": { "productId": 1, "createdAt": -1 }, "options": { "name": "product_reviews_newest_first" } },
+      { "key": { "createdAt": -1 }, "options": { "name": "newest_first" } }
+    ]
+  },
+  "messages": {
+    "validator": {
+      "$jsonSchema": {
+        "bsonType": "object",
+        "required": ["name", "email", "subject", "message", "status", "createdAt"],
+        "properties": {
+          "name": { "bsonType": "string", "minLength": 2, "maxLength": 100 },
+          "email": { "bsonType": "string", "pattern": "^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$" },
+          "subject": { "bsonType": "string", "minLength": 3, "maxLength": 150 },
+          "message": { "bsonType": "string", "minLength": 10, "maxLength": 2000 },
+          "status": { "enum": ["new", "read", "replied"] },
+          "createdAt": { "bsonType": "date" }
+        }
+      }
+    },
+    "indexes": [
+      { "key": { "status": 1, "createdAt": -1 }, "options": { "name": "inbox_by_status" } }
+    ]
+  }
+}

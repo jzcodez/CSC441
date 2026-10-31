@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Get in touch with Ember & Bean: questions, catering and feedback.">
+  <title>Contact | Ember &amp; Bean</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☕</text></svg>">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <script src="js/main.js" defer></script>
+  <script type="module" src="js/pages/contact.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">Ember &amp; Bean</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">☰</button>
+      <nav id="site-nav" class="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="order.html">Order</a></li>
+          <li><a href="reviews.html">Reviews</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-header">
+      <div class="container">
+        <h1>Contact Us</h1>
+        <p>Questions, catering requests or feedback: we'd love to hear from you.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container two-column">
+        <form id="contact-form" class="form card" novalidate>
+          <h2>Send us a message</h2>
+
+          <div class="form-field">
+            <label for="name">Name <span class="required" aria-hidden="true">*</span></label>
+            <input type="text" id="name" name="name" autocomplete="name"
+                   required minlength="2" maxlength="100"
+                   pattern="[A-Za-zÀ-ÿ' \-]+" data-pattern-message="Please use letters, spaces, apostrophes or hyphens only."
+                   aria-describedby="name-error">
+            <p id="name-error" class="field-error" aria-live="polite"></p>
+          </div>
+
+          <div class="form-row">
+            <div class="form-field">
+              <label for="email">Email <span class="required" aria-hidden="true">*</span></label>
+              <input type="email" id="email" name="email" autocomplete="email"
+                     required maxlength="255" aria-describedby="email-error">
+              <p id="email-error" class="field-error" aria-live="polite"></p>
+            </div>
+            <div class="form-field">
+              <label for="confirmEmail">Confirm email <span class="required" aria-hidden="true">*</span></label>
+              <input type="email" id="confirmEmail" name="confirmEmail" autocomplete="email"
+                     required maxlength="255" aria-describedby="confirmEmail-error">
+              <p id="confirmEmail-error" class="field-error" aria-live="polite"></p>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="subject">Subject <span class="required" aria-hidden="true">*</span></label>
+            <input type="text" id="subject" name="subject" required minlength="3" maxlength="150"
+                   aria-describedby="subject-error">
+            <p id="subject-error" class="field-error" aria-live="polite"></p>
+          </div>
+
+          <div class="form-field">
+            <label for="message">Message <span class="required" aria-hidden="true">*</span></label>
+            <textarea id="message" name="message" required minlength="10" maxlength="2000"
+                      aria-describedby="message-error"></textarea>
+            <p id="message-error" class="field-error" aria-live="polite"></p>
+          </div>
+
+          <p class="form-status" role="status" aria-live="polite"></p>
+          <button type="submit" class="btn btn--primary">Send message</button>
+        </form>
+
+        <aside>
+          <h2>Visit the café</h2>
+          <address>
+            123 Roast Street<br>
+            Springfield<br>
+            Phone: <a href="tel:+15550100200">(555) 010-0200</a><br>
+            Email: <a href="mailto:hello@emberandbean.example">hello@emberandbean.example</a>
+          </address>
+          <h3>Opening hours</h3>
+          <p>Open every day from 7:00 to 20:00, including holidays.</p>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <section>
+          <h2>Ember &amp; Bean</h2>
+          <p>Small-batch coffee, roasted with care and served with a smile.</p>
+        </section>
+        <section>
+          <h2>Visit us</h2>
+          <address>123 Roast Street<br>Springfield<br><a href="tel:+15550100200">(555) 010-0200</a></address>
+        </section>
+        <section>
+          <h2>Hours</h2>
+          <ul>
+            <li>Open daily</li>
+            <li>7:00 – 20:00</li>
+          </ul>
+        </section>
+      </div>
+      <p class="footer-bottom">&copy; <span data-current-year>2026</span> Ember &amp; Bean · CSC441 project</p>
+    </div>
+  </footer>
+</body>
+</html>

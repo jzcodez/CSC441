@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Read what our customers think and share your own review.">
+  <title>Reviews | Ember &amp; Bean</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☕</text></svg>">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <script src="js/main.js" defer></script>
+  <script type="module" src="js/pages/reviews.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">Ember &amp; Bean</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">☰</button>
+      <nav id="site-nav" class="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="order.html">Order</a></li>
+          <li><a href="reviews.html" aria-current="page">Reviews</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-header">
+      <div class="container">
+        <h1>Customer Reviews</h1>
+        <p>Honest opinions from the people who drink our coffee every day.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container two-column">
+        <section aria-labelledby="latest-heading">
+          <h2 id="latest-heading">Latest reviews</h2>
+          <div id="review-list" class="review-list" aria-live="polite"></div>
+        </section>
+
+        <section aria-labelledby="write-heading">
+          <form id="review-form" class="form card" novalidate>
+            <h2 id="write-heading">Write a review</h2>
+
+            <div class="form-field">
+              <label for="productId">Product <span class="required" aria-hidden="true">*</span></label>
+              <select id="productId" name="productId" required aria-describedby="productId-error">
+                <option value="">Choose a product…</option>
+              </select>
+              <p id="productId-error" class="field-error" aria-live="polite"></p>
+            </div>
+
+            <div class="form-field">
+              <label for="name">Your name <span class="required" aria-hidden="true">*</span></label>
+              <input type="text" id="name" name="name" autocomplete="given-name"
+                     required minlength="2" maxlength="60" aria-describedby="name-error">
+              <p id="name-error" class="field-error" aria-live="polite"></p>
+            </div>
+
+            <div class="form-field">
+              <fieldset aria-describedby="rating-error">
+                <legend>Rating <span class="required" aria-hidden="true">*</span></legend>
+                <div class="rating-input">
+                  <label><input type="radio" name="rating" value="5" required> 5 ★</label>
+                  <label><input type="radio" name="rating" value="4"> 4 ★</label>
+                  <label><input type="radio" name="rating" value="3"> 3 ★</label>
+                  <label><input type="radio" name="rating" value="2"> 2 ★</label>
+                  <label><input type="radio" name="rating" value="1"> 1 ★</label>
+                </div>
+              </fieldset>
+              <p id="rating-error" class="field-error" aria-live="polite"></p>
+            </div>
+
+            <div class="form-field">
+              <label for="comment">Your review <span class="required" aria-hidden="true">*</span></label>
+              <textarea id="comment" name="comment" required minlength="10" maxlength="1000"
+                        aria-describedby="comment-hint comment-error"></textarea>
+              <p id="comment-hint" class="hint">10 to 1000 characters.</p>
+              <p id="comment-error" class="field-error" aria-live="polite"></p>
+            </div>
+
+            <p class="form-status" role="status" aria-live="polite"></p>
+            <button type="submit" class="btn btn--primary">Post review</button>
+          </form>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <section>
+          <h2>Ember &amp; Bean</h2>
+          <p>Small-batch coffee, roasted with care and served with a smile.</p>
+        </section>
+        <section>
+          <h2>Visit us</h2>
+          <address>123 Roast Street<br>Springfield<br><a href="tel:+15550100200">(555) 010-0200</a></address>
+        </section>
+        <section>
+          <h2>Hours</h2>
+          <ul>
+            <li>Open daily</li>
+            <li>7:00 – 20:00</li>
+          </ul>
+        </section>
+      </div>
+      <p class="footer-bottom">&copy; <span data-current-year>2026</span> Ember &amp; Bean · CSC441 project</p>
+    </div>
+  </footer>
+</body>
+</html>

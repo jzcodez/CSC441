@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Order coffee and pastries online for pickup.">
+  <title>Order for Pickup | Ember &amp; Bean</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☕</text></svg>">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <script src="js/main.js" defer></script>
+  <script type="module" src="js/pages/order.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">Ember &amp; Bean</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">☰</button>
+      <nav id="site-nav" class="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="order.html" aria-current="page">Order</a></li>
+          <li><a href="reviews.html">Reviews</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-header">
+      <div class="container">
+        <h1>Order for Pickup</h1>
+        <p>Choose your items, pick a time, and we'll have it ready when you arrive.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="order-layout">
+          <form id="order-form" class="form card" novalidate>
+            <fieldset class="form-field">
+              <legend>1. Choose your items <span class="required" aria-hidden="true">*</span></legend>
+              <div id="order-items" class="order-items">
+                <p class="placeholder">Loading the menu…</p>
+              </div>
+              <p id="items-error" class="field-error" aria-live="polite"></p>
+            </fieldset>
+
+            <h2>2. Your details</h2>
+
+            <div class="form-field">
+              <label for="customerName">Full name <span class="required" aria-hidden="true">*</span></label>
+              <input type="text" id="customerName" name="customerName" autocomplete="name"
+                     required minlength="2" maxlength="100" aria-describedby="customerName-error">
+              <p id="customerName-error" class="field-error" aria-live="polite"></p>
+            </div>
+
+            <div class="form-row">
+              <div class="form-field">
+                <label for="customerEmail">Email <span class="required" aria-hidden="true">*</span></label>
+                <input type="email" id="customerEmail" name="customerEmail" autocomplete="email"
+                       required maxlength="255" aria-describedby="customerEmail-error">
+                <p id="customerEmail-error" class="field-error" aria-live="polite"></p>
+              </div>
+              <div class="form-field">
+                <label for="customerPhone">Phone <span class="required" aria-hidden="true">*</span></label>
+                <input type="tel" id="customerPhone" name="customerPhone" autocomplete="tel"
+                       required pattern="\+?[0-9\s\-]{7,15}"
+                       data-pattern-message="Use 7 to 15 digits; spaces, dashes and a leading + are allowed."
+                       aria-describedby="customerPhone-hint customerPhone-error">
+                <p id="customerPhone-hint" class="hint">e.g. 555-010-0200</p>
+                <p id="customerPhone-error" class="field-error" aria-live="polite"></p>
+              </div>
+            </div>
+
+            <div class="form-field">
+              <label for="pickupTime">Pickup time <span class="required" aria-hidden="true">*</span></label>
+              <input type="datetime-local" id="pickupTime" name="pickupTime" required
+                     data-range-message="Please choose a time within the next 7 days."
+                     aria-describedby="pickupTime-hint pickupTime-error">
+              <p id="pickupTime-hint" class="hint">We're open daily from 7:00 to 20:00.</p>
+              <p id="pickupTime-error" class="field-error" aria-live="polite"></p>
+            </div>
+
+            <div class="form-field">
+              <label for="notes">Notes for the barista</label>
+              <textarea id="notes" name="notes" maxlength="500" placeholder="Oat milk, extra hot…"
+                        aria-describedby="notes-error"></textarea>
+              <p id="notes-error" class="field-error" aria-live="polite"></p>
+            </div>
+
+            <p class="form-status" role="status" aria-live="polite"></p>
+            <button type="submit" class="btn btn--primary">Place order</button>
+          </form>
+
+          <aside class="card order-summary" aria-labelledby="summary-heading">
+            <h2 id="summary-heading">Your order</h2>
+            <ul id="summary-items"></ul>
+            <p class="order-total"><span>Total</span><span id="summary-total">$0.00</span></p>
+          </aside>
+        </div>
+
+        <section id="order-confirmation" class="card" aria-live="polite" hidden></section>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <section>
+          <h2>Ember &amp; Bean</h2>
+          <p>Small-batch coffee, roasted with care and served with a smile.</p>
+        </section>
+        <section>
+          <h2>Visit us</h2>
+          <address>123 Roast Street<br>Springfield<br><a href="tel:+15550100200">(555) 010-0200</a></address>
+        </section>
+        <section>
+          <h2>Hours</h2>
+          <ul>
+            <li>Open daily</li>
+            <li>7:00 – 20:00</li>
+          </ul>
+        </section>
+      </div>
+      <p class="footer-bottom">&copy; <span data-current-year>2026</span> Ember &amp; Bean · CSC441 project</p>
+    </div>
+  </footer>
+</body>
+</html>

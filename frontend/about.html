@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The story behind Ember & Bean, our values and opening hours.">
+  <title>About Us | Ember &amp; Bean</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☕</text></svg>">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">Ember &amp; Bean</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">☰</button>
+      <nav id="site-nav" class="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="order.html">Order</a></li>
+          <li><a href="reviews.html">Reviews</a></li>
+          <li><a href="about.html" aria-current="page">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-header">
+      <div class="container">
+        <h1>About Ember &amp; Bean</h1>
+        <p>A neighbourhood café built on good coffee and good company.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container two-column">
+        <article>
+          <h2>Our story</h2>
+          <p>Ember &amp; Bean started as a weekend coffee cart run by three friends who couldn't find a cup they loved
+            close to home. A few hundred early mornings later, the cart became a café on Roast Street.</p>
+          <p>We still roast in small batches every week, and we still know most of our regulars by name. The coffee
+            has got better; the welcome hasn't changed.</p>
+        </article>
+        <figure class="card">
+          <blockquote>
+            <p>"Great coffee is simple: good beans, roasted with care, brewed by someone who cares about your morning."</p>
+          </blockquote>
+          <figcaption>The Ember &amp; Bean team</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section section--alt" aria-labelledby="values-heading">
+      <div class="container">
+        <div class="section-header">
+          <h2 id="values-heading">What we care about</h2>
+        </div>
+        <div class="feature-grid">
+          <article>
+            <div class="feature-icon" aria-hidden="true">🤝</div>
+            <h3>Fair trade</h3>
+            <p>We pay farmers above market price and visit the farms we buy from.</p>
+          </article>
+          <article>
+            <div class="feature-icon" aria-hidden="true">♻️</div>
+            <h3>Less waste</h3>
+            <p>Compostable cups, a discount for bringing your own, and coffee grounds for local gardens.</p>
+          </article>
+          <article>
+            <div class="feature-icon" aria-hidden="true">🏘️</div>
+            <h3>Local first</h3>
+            <p>Our milk, pastries and art on the walls all come from our neighbourhood.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="hours-heading">
+      <div class="container two-column">
+        <div>
+          <h2 id="hours-heading">Opening hours</h2>
+          <table class="hours-table">
+            <caption class="visually-hidden">Opening hours by day</caption>
+            <thead>
+              <tr><th scope="col">Day</th><th scope="col">Hours</th></tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">Monday – Friday</th><td>7:00 – 20:00</td></tr>
+              <tr><th scope="row">Saturday</th><td>7:00 – 20:00</td></tr>
+              <tr><th scope="row">Sunday</th><td>7:00 – 20:00</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div>
+          <h2>Find us</h2>
+          <address>123 Roast Street<br>Springfield</address>
+          <p>Two minutes from Central Station, with bike racks out front.</p>
+          <a class="btn btn--primary" href="order.html">Order ahead</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <section>
+          <h2>Ember &amp; Bean</h2>
+          <p>Small-batch coffee, roasted with care and served with a smile.</p>
+        </section>
+        <section>
+          <h2>Visit us</h2>
+          <address>123 Roast Street<br>Springfield<br><a href="tel:+15550100200">(555) 010-0200</a></address>
+        </section>
+        <section>
+          <h2>Hours</h2>
+          <ul>
+            <li>Open daily</li>
+            <li>7:00 – 20:00</li>
+          </ul>
+        </section>
+      </div>
+      <p class="footer-bottom">&copy; <span data-current-year>2026</span> Ember &amp; Bean · CSC441 project</p>
+    </div>
+  </footer>
+</body>
+</html>

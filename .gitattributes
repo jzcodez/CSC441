@@ -1,0 +1,2 @@
+# Store text files with LF line endings in the repo, whatever OS each teammate uses.
+* text=auto eol=lf
