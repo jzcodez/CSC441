@@ -1,116 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Ember & Bean: small-batch coffee, fresh pastries and online ordering for pickup.">
-  <title>Ember &amp; Bean | Small-Batch Coffee</title>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☕</text></svg>">
-  <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/layout.css">
-  <link rel="stylesheet" href="css/components.css">
-  <script src="js/main.js" defer></script>
-  <script type="module" src="js/pages/home.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amore Coffee Shop</title>
+    <link rel="stylesheet" href="frontend\css\layout.css">
 </head>
+
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
 
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="index.html" class="logo">Ember &amp; Bean</a>
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">☰</button>
-      <nav id="site-nav" class="site-nav" aria-label="Main">
-        <ul>
-          <li><a href="index.html" aria-current="page">Home</a></li>
-          <li><a href="menu.html">Menu</a></li>
-          <li><a href="order.html">Order</a></li>
-          <li><a href="reviews.html">Reviews</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
+    <!-- Navigation -->
+    <header>
+    <nav class="navbar">
+
+        <div class="logo">
+            <h2>☕ Coffee</h2> 
+            <h2>Amore</h2>
+        </div>
+
+        <ul class="nav-center">
+            <li><a href="index.html"> Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
-      </nav>
-    </div>
-  </header>
 
-  <main id="main">
+        <div class="order-link">
+            <a href="order.html">Order</a>
+        </div>
+
+    </nav>
+</header>
+
+    <!-- Hero Section -->
     <section class="hero">
-      <div class="container">
-        <h1>Coffee worth waking up for</h1>
-        <p>Small-batch beans, roasted with care and brewed to order. Order ahead and skip the line.</p>
-        <div class="hero-actions">
-          <a class="btn btn--primary" href="order.html">Order for pickup</a>
-          <a class="btn btn--outline" href="menu.html">See the menu</a>
+        <div class="hero-text">
+            <h1>Coffee made with Amore. Come back for more</h1>
+
+            <p>
+                Experience handcrafted coffee, delicious pastries,
+                and a welcoming atmosphere.
+            </p>
+
+            <a href="menu.html" class="btn">
+                View Menu
+            </a>
         </div>
-      </div>
     </section>
 
-    <section class="section" aria-labelledby="featured-heading">
-      <div class="container">
-        <div class="section-header">
-          <h2 id="featured-heading">Customer favourites</h2>
-          <p>The drinks and bakes our regulars come back for.</p>
-        </div>
-        <div id="featured-products" class="product-grid"></div>
-      </div>
+    <!-- Welcome Section -->
+    <section class="welcome">
+        <h2>More Than Just Coffee</h2>
+
+        <p>
+            At Coffee Amore , we believe every great day starts with a great cup
+            of coffee. We carefully select our beans and prepare every drink
+            with passion and attention to detail.
+        </p>
+        
     </section>
 
-    <section class="section section--alt" aria-labelledby="why-heading">
-      <div class="container">
-        <div class="section-header">
-          <h2 id="why-heading">Why Ember &amp; Bean?</h2>
+    <!-- Featured Drinks -->
+    <section class="featured">
+        <h2>Featured Favorites</h2>
+
+        <div class="featured-container">
+
+            <div class="card">
+                <img src="https://static.vecteezy.com/system/resources/thumbnails/022/993/484/small_2x/coffee-latte-with-creamy-and-foam-in-cup-and-latte-art-shape-on-dark-wooden-table-with-coffee-beans-decoration-calm-and-relax-coffee-relaxation-time-hot-beverage-with-generative-ai-photo.jpeg" alt="Latte">
+                <h3>Vanilla Latte</h3>
+                <p>Smooth espresso with steamed milk and vanilla.</p>
+            </div>
+
+             <div class="card">
+                <img src="https://tse4.mm.bing.net/th/id/OIP.k0WKxuz9nagb2KA7y9K7jwHaEJ?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Mocha">
+                <h3>Mocha</h3>
+                <p>Rich chocolate flavor with steamed milk.</p>
+            </div>
+
+            <div class="card">
+                <img src="https://i.pinimg.com/736x/da/6f/3a/da6f3a6305596079b891bdb35d53b5f4--starbucks-iced-coffee-make-iced-coffee.jpg" alt="Iced Coffee">
+                <h3>Iced Coffee</h3>
+                <p>Bold flavor packed into every sip.</p>
+            </div>
+
+            <div class="card">
+                <img src="https://tse2.mm.bing.net/th/id/OIP.ZeK01AedSSWM4_hm1W4ofwHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Blueberry Muffin">
+                <h3>Blueberry Muffin</h3>
+                <p>Fresh baked daily and perfect with coffee.</p>
+            </div>
+
         </div>
-        <div class="feature-grid">
-          <article>
-            <div class="feature-icon" aria-hidden="true">🌱</div>
-            <h3>Ethically sourced</h3>
-            <p>We buy directly from farms we know, paying fair prices for great beans.</p>
-          </article>
-          <article>
-            <div class="feature-icon" aria-hidden="true">🔥</div>
-            <h3>Roasted weekly</h3>
-            <p>Small batches roasted every week, so your cup is always fresh.</p>
-          </article>
-          <article>
-            <div class="feature-icon" aria-hidden="true">🥐</div>
-            <h3>Baked every morning</h3>
-            <p>Pastries from our neighbourhood bakery, delivered warm each day.</p>
-          </article>
-        </div>
-      </div>
     </section>
 
-    <section class="section" aria-labelledby="reviews-heading">
-      <div class="container">
-        <div class="section-header">
-          <h2 id="reviews-heading">What people are saying</h2>
-          <p><a href="reviews.html">Read all reviews</a></p>
-        </div>
-        <div id="latest-reviews" class="review-list review-list--grid"></div>
-      </div>
-    </section>
-  </main>
+    <!-- Hours -->
+    <section class="hours">
+        <h2>Business Hours</h2>
 
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <section>
-          <h2>Ember &amp; Bean</h2>
-          <p>Small-batch coffee, roasted with care and served with a smile.</p>
-        </section>
-        <section>
-          <h2>Visit us</h2>
-          <address>123 Roast Street<br>Springfield<br><a href="tel:+15550100200">(555) 010-0200</a></address>
-        </section>
-        <section>
-          <h2>Hours</h2>
-          <ul>
-            <li>Open daily</li>
-            <li>7:00 – 20:00</li>
-          </ul>
-        </section>
-      </div>
-      <p class="footer-bottom">&copy; <span data-current-year>2026</span> Ember &amp; Bean · CSC441 project</p>
-    </div>
-  </footer>
+        <table>
+            <tr>
+                <td>Monday - Friday</td>
+                <td>6:00 AM - 8:00 PM</td>
+            </tr>
+
+            <tr>
+                <td>Saturday</td>
+                <td>7:00 AM - 9:00 PM</td>
+            </tr>
+
+            <tr>
+                <td>Sunday</td>
+                <td>7:00 AM - 6:00 PM</td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>
+            © 2026 Coffee Amore |
+            Jacksonville, FL
+        </p>
+    </footer>
+
 </body>
 </html>
