@@ -1,228 +1,334 @@
 /* Page layout: container, header, navigation, sections, footer and responsive breakpoints. */
 
-.container {
-  width: 100%;
-  max-width: var(--max-width);
-  margin: 0 auto;
-  padding: 0 var(--space-3);
+body {
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f0e8;
+    color: #333;
 }
 
-/* ---------- Header and navigation ---------- */
+/* Navigation */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-.site-header {
-  background: var(--color-espresso);
-  color: var(--color-foam);
-  position: sticky;
-  top: 0;
-  z-index: 50;
+    background-color: #5c4033;
+
+    padding: 5px 30px;
+    height: 35px;
 }
 
-.header-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  min-height: 4rem;
+.logo h2 {
+    color: white;
+    margin: 0;
 }
 
-.logo {
-  font-family: var(--font-heading);
-  font-size: 1.4rem;
-  font-weight: bold;
-  color: var(--color-foam);
-  text-decoration: none;
+.nav-center {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 10;
+    padding: 50;
+    
 }
 
-.logo:hover {
-  color: var(--color-caramel);
+.nav-center a,
+.order-link a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
 }
 
-.nav-toggle {
-  display: none;
-  background: none;
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  border-radius: var(--radius);
-  color: var(--color-foam);
-  font-size: 1.25rem;
-  padding: var(--space-1) var(--space-2);
-  cursor: pointer;
+.nav-center a:hover,
+.order-link a:hover {
+    color: #d9b382;
 }
 
-.site-nav ul {
-  display: flex;
-  gap: var(--space-1);
-  list-style: none;
-  margin: 0;
-  padding: 0;
+.order-link {
+    margin-left: auto;
 }
 
-.site-nav a {
-  display: block;
-  padding: var(--space-2) var(--space-3);
-  border-radius: var(--radius);
-  color: var(--color-foam);
-  text-decoration: none;
-}
-
-.site-nav a:hover,
-.site-nav a[aria-current="page"] {
-  background: var(--color-roast);
-  color: var(--color-foam);
-}
-
-/* ---------- Main content ---------- */
-
-main {
-  min-height: 60vh;
-}
-
-.section {
-  padding: var(--space-6) 0;
-}
-
-.section--alt {
-  background: var(--color-foam);
-}
-
-.section-header {
-  text-align: center;
-  max-width: 40rem;
-  margin: 0 auto var(--space-5);
-}
-
-.section-header p {
-  color: var(--color-muted);
-}
-
-.page-header {
-  background: var(--color-roast);
-  color: var(--color-foam);
-  padding: var(--space-5) 0;
-}
-
-.page-header h1 {
-  color: var(--color-foam);
-  margin-bottom: var(--space-2);
-}
-
-.page-header p {
-  margin: 0;
-  opacity: 0.9;
-}
-
+/* Hero */
 .hero {
-  background:
-    linear-gradient(rgba(43, 29, 20, 0.7), rgba(43, 29, 20, 0.7)),
-    radial-gradient(circle at 70% 30%, var(--color-caramel), var(--color-espresso));
-  color: var(--color-foam);
-  padding: var(--space-6) 0;
-  text-align: center;
+    height: 300px;
+
+    background-image:
+        linear-gradient(
+            rgba(0,0,0,.25),
+            rgba(0,0,0,.25)
+        ),
+        url("https://static.vecteezy.com/system/resources/previews/023/010/450/large_2x/the-cup-of-latte-coffee-with-heart-shaped-latte-art-and-ai-generated-free-photo.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: right;
+
+    padding-right: 60px;
 }
 
-.hero h1 {
-  color: var(--color-foam);
+.hero-content {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
 }
 
-.hero p {
-  font-size: 1.15rem;
-  max-width: 36rem;
-  margin: 0 auto var(--space-4);
+.hero-text {
+    max-width: 300px;
+
+    background-color: rgba(14, 7, 2, 0.541);
+
+    padding: 40px;
+
+    border-radius: 8px;
 }
 
-.hero-actions {
-  display: flex;
-  gap: var(--space-3);
-  justify-content: center;
-  flex-wrap: wrap;
+.hero-text h1 {
+    font-size: 1.8rem;
+    color: #f8e9da;
+    margin-bottom: 0px;
 }
 
-.hero-actions--start {
-  justify-content: flex-start;
+.hero-text p {
+    font-size: 1.2rem;
+    color: #f8e9da;
+    line-height: 1.5;
+}
+.hero-text a {
+    display: float;
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #8b5e3c;
+    color: white;
+    text-decoration: none;
+    border-radius: 1px;
+    
+}
+/* Welcome */
+
+.welcome {
+    max-width: 400px;
+    text-align: left;
+    padding: 15px;
+    
 }
 
-.two-column {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--space-5);
-  align-items: start;
+.welcome h2 {
+    font-size: 1.7rem;
+    margin-bottom: 10px;
 }
 
-.order-layout {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: var(--space-5);
-  align-items: start;
+.welcome p {
+    font-size: 1.0rem;
+    line-height: 1.5;
 }
 
-/* ---------- Footer ---------- */
+/* Featured Items */
 
-.site-footer {
-  background: var(--color-espresso);
-  color: rgba(255, 255, 255, 0.85);
-  padding: var(--space-5) 0 var(--space-3);
-  margin-top: var(--space-6);
+.featured {
+    padding: 50px;
+    text-align: center;
 }
 
-.footer-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--space-4);
+.featured-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: none;
 }
 
-.site-footer h2 {
-  color: var(--color-foam);
-  font-size: 1.1rem;
+.card {
+    background: rgba(230, 228, 220, 0.527);
+    width: 175px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,.1);
 }
 
-.site-footer a {
-  color: var(--color-caramel);
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
 }
 
-.site-footer ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+/* Hours */
+
+.hours {
+    padding: 50px;
+    text-align: center;
 }
 
-.footer-bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.15);
-  margin-top: var(--space-4);
-  padding-top: var(--space-3);
-  font-size: 0.9rem;
-  text-align: center;
+.hours table {
+    margin: 0 auto;
+    background: rgba(223, 213, 201, 0.815);
+    padding: 10px;
+    border-radius: 1px;
 }
 
-/* ---------- Responsive ---------- */
+.hours td {
+    padding: 5px 10px;
+}
 
-@media (max-width: 800px) {
-  .nav-toggle {
-    display: block;
-  }
+/* Footer */
 
-  .site-nav {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background: var(--color-espresso);
-    padding: var(--space-2) var(--space-3) var(--space-3);
-  }
+footer {
+    background-color: #5c4033;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
 
-  .site-nav.is-open {
-    display: block;
-  }
+/* Mobile */
 
-  .site-nav ul {
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* About Page Banner */
+
+.page-banner {
+    background-color: #8b5e3c;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+/* Content Sections */
+
+.about-section,
+.mission-section,
+.features-section,
+.team-section {
+    padding: 50px;
+    text-align: center;
+}
+
+.about-section p,
+.mission-section p {
+    max-width: 900px;
+    margin: 0 auto 20px;
+    line-height: 1.8;
+}
+
+/* Features */
+
+.feature-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.feature-box {
+    background: rgb(206, 196, 179);
+    width: 275px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,.1);
+}
+
+/* Team */
+
+.team-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.team-card {
+    background: rgb(207, 206, 198);
+    width: 250px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,.1);
+}
+
+.team-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.team-card h3 {
+    margin-top: 15px;
+    color: #5c4033;
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+    .feature-container,
+    .team-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    padding: 60px 30px;
+}
+
+.contact-info {
+    width: 350px;
+}
+
+.contact-info h2,
+.contact-form h2 {
+    color: #5c4033;
+}
+
+.contact-form {
+    width: 450px;
+}
+
+.contact-form form {
+    display: flex;
     flex-direction: column;
-  }
+    gap: 15px;
+}
 
-  .two-column,
-  .order-layout,
-  .footer-grid {
-    grid-template-columns: 1fr;
-  }
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+}
 
-  .section {
-    padding: var(--space-5) 0;
-  }
+.contact-form button {
+    background-color: #5c4033;
+    color: white;
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.contact-form button:hover {
+    background-color: #8b5e3c;
+}
+
+#formMessage {
+    margin-top: 15px;
+    font-weight: bold;
+    color: green;
 }
