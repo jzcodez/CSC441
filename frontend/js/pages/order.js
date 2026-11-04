@@ -10,6 +10,7 @@ const MIN_LEAD_MINUTES = 15;
 const MAX_DAYS_AHEAD = 7;
 
 const form = document.getElementById('order-form');
+const clearButton = document.getElementById('clear-order');
 const itemsContainer = document.getElementById('order-items');
 const summaryList = document.getElementById('summary-items');
 const summaryTotal = document.getElementById('summary-total');
@@ -105,6 +106,11 @@ pickupInput.min = toLocalInputValue(now);
 pickupInput.max = toLocalInputValue(new Date(now.getTime() + MAX_DAYS_AHEAD * 24 * 60 * 60 * 1000));
 
 itemsContainer.addEventListener('input', updateSummary);
+clearButton.addEventListener('click', () => {
+  form.reset();
+  updateSummary();
+});
+
 
 setupForm(form, {
   rules,
