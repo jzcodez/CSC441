@@ -5,6 +5,8 @@ dotenv.config({ quiet: true });
 
 export const config = {
   port: Number(process.env.PORT) || 3000,
+  // Prints one line per request. On by default; set LOG_REQUESTS=false in .env to hide it.
+  logRequests: process.env.LOG_REQUESTS !== 'false',
   mysql: {
     host: process.env.MYSQL_HOST || 'localhost',
     port: Number(process.env.MYSQL_PORT) || 3306,

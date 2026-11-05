@@ -3,6 +3,7 @@
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import express from 'express';
+import { config } from './config/env.js';
 import apiRouter from './routes/index.js';
 import { apiNotFound, errorHandler } from './middleware/errorHandler.js';
 
@@ -11,6 +12,15 @@ const frontendDir = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '
 export const app = express();
 
 app.disable('x-powered-by');
+
+if (config.logRequests) {
+  app.use((req, res, next) => {
+    const start = Date.now();
+    res.on('finish', () => console.log(`${req.method} ${req.originalUrl} ${res.statusCode} ${Date.now() - start}ms`));
+    next();
+  });
+}
+
 app.use(express.json({ limit: '20kb' }));
 
 app.use('/api', apiRouter);
