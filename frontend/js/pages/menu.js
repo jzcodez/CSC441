@@ -4,6 +4,7 @@ import { escapeHtml, productCard, renderList } from '../ui.js';
 
 const filterBar = document.getElementById('category-filter');
 const grid = document.getElementById('menu-grid');
+const searchInput = document.getElementById('menu-search');
 let activeCategory = new URLSearchParams(location.search).get('category') ?? '';
 
 function showProducts() {
@@ -12,12 +13,20 @@ function showProducts() {
   }
   renderList(
     grid,
-    () => api.getProducts(activeCategory ? { category: activeCategory } : {}),
+    async () => {
+      const products = await api.getProducts(activeCategory ? { category: activeCategory } : {});
+      const search = searchInput.value.toLowerCase();
+
+      return products.filter((product) =>
+        product.name.toLowerCase().includes(search)
+      );
+    },
+
     productCard,
     'Nothing in this category yet.',
   );
 }
-
+searchInput.addEventListener('input', showProducts);
 filterBar.addEventListener('click', (event) => {
   const button = event.target.closest('button');
   if (!button) return;
