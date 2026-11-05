@@ -117,4 +117,11 @@ export function setupForm(form, { rules = {}, groupRules = {}, onSubmit }) {
       submitButton.disabled = false;
     }
   });
+
+  // form.reset() only clears the values, so also clear our messages and invalid markers.
+  form.addEventListener('reset', () => {
+    setStatus(status);
+    for (const field of form.querySelectorAll('[aria-invalid]')) field.setAttribute('aria-invalid', 'false');
+    for (const error of form.querySelectorAll('.field-error')) error.textContent = '';
+  });
 }
