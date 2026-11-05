@@ -3,7 +3,7 @@
 // 1. HTML5: each input declares its own rules in the markup (required, type="email", pattern,
 //    minlength/maxlength, min/max), and the browser's Constraint Validation API checks them.
 // 2. JavaScript: this module reads those results, shows friendly inline messages next to each
-//    field, and adds custom rules HTML can't express (opening hours, matching emails, ...).
+//    field, and adds custom rules HTML can't express (opening hours, ...).
 //
 // The server validates everything again, because anything in the browser can be bypassed.
 

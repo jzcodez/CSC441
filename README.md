@@ -9,7 +9,7 @@ Data comes from **two databases**: **MySQL** for the menu and orders, and **Mong
 | Criterion | Where to look |
 |---|---|
 | **Pulls data from SQL and NoSQL** | The menu, product details and orders come from MySQL ([productService.js](backend/src/services/productService.js), [orderService.js](backend/src/services/orderService.js)). Reviews, ratings and messages come from MongoDB ([reviewService.js](backend/src/services/reviewService.js)). [product.html](frontend/product.html) shows **both on one page**. |
-| **Forms validated with HTML5 and JavaScript** | Three forms: [order](frontend/order.html), [review](frontend/reviews.html) and [contact](frontend/contact.html). Rules are declared with HTML5 attributes, and [validation.js](frontend/js/validation.js) adds inline messages plus custom rules (opening hours, matching emails, at least one item). The server re-validates in [validators/index.js](backend/src/validators/index.js). |
+| **Forms validated with HTML5 and JavaScript** | Three forms: [order](frontend/order.html), [review](frontend/reviews.html) and [contact](frontend/contact.html). Rules are declared with HTML5 attributes, and [validation.js](frontend/js/validation.js) adds inline messages plus custom rules (opening hours, at least one item). The server re-validates in [validators/index.js](backend/src/validators/index.js). |
 | **At least five HTML/CSS pages** | Seven pages: Home, Menu, Product, Order, Reviews, Contact and About, plus a 404 page. Styling lives in three external stylesheets in [frontend/css/](frontend/css/). |
 | **Reasoning and logical development** | A layered backend, a documented choice between SQL and NoSQL, and design notes in [docs/architecture.md](docs/architecture.md) and [database/README.md](database/README.md). |
 
