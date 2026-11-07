@@ -1,8 +1,8 @@
 // Opening hours and pickup slots in the café's own time zone, whatever time zone the visitor's
 // device uses. Change CAFE_TIME_ZONE (an IANA name such as 'Asia/Karachi') if the café moves.
 
-export const CAFE_TIME_ZONE = 'Asia/Karachi';
-export const CAFE_TIME_ZONE_LABEL = 'Pakistan time';
+export const CAFE_TIME_ZONE = 'UTC';
+export const CAFE_TIME_ZONE_LABEL = 'UTC';
 export const OPEN_HOUR = 6;
 export const CLOSE_HOUR = 24; // midnight
 export const OPEN_LABEL = '6:00 AM';
