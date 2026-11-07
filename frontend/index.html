@@ -33,54 +33,81 @@
   </header>
 
   <main id="main">
-    <section class="hero">
+    <section class="hero hero--split">
       <div class="container">
-        <h1>Coffee worth waking up for</h1>
-        <p>Small-batch beans, roasted with care and brewed to order. Order ahead and skip the line.</p>
-        <div class="hero-actions">
-          <a class="btn btn--primary" href="order.html">Order for pickup</a>
-          <a class="btn btn--outline" href="menu.html">See the menu</a>
+        <div>
+          <span class="eyebrow">Small-batch coffee · Order for pickup</span>
+          <h1>Coffee worth waking up for</h1>
+          <p>Small-batch beans, roasted with care and brewed to order. Order ahead and skip the line.</p>
+          <div class="hero-actions">
+            <a class="btn btn--primary" href="order.html">Order for pickup</a>
+            <a class="btn btn--outline" href="menu.html">See the menu</a>
+          </div>
+          <p class="hero-meta">Open daily, 6:00 AM – midnight</p>
+        </div>
+        <div class="hero-art">
+          <img src="images/home/hero-cup.svg" alt="" width="520" height="440">
         </div>
       </div>
     </section>
 
     <section class="section" aria-labelledby="welcome-heading">
-      <div class="container">
-        <div class="section-header">
+      <div class="container split">
+        <div class="split-media">
+          <img src="images/home/coffee-story.svg" width="600" height="460"
+               alt="A pour-over coffee maker, a bag of our house blend and a cup of coffee on a wooden table">
+        </div>
+        <div>
+          <span class="eyebrow">Our story</span>
           <h2 id="welcome-heading">More than just coffee</h2>
-          <p>At Ember &amp; Bean, we believe every great day starts with a great cup of coffee. We carefully select our beans and prepare every drink with passion and attention to detail.</p>
+          <p class="lead">At Ember &amp; Bean, we believe every great day starts with a great cup of coffee. We carefully select our beans and prepare every drink with passion and attention to detail.</p>
+          <ul class="check-list">
+            <li>Beans roasted in small batches every week</li>
+            <li>Every drink made to order by our baristas</li>
+            <li>Pastries baked fresh every morning</li>
+          </ul>
+          <a class="link-arrow" href="about.html">Read our story →</a>
         </div>
       </div>
     </section>
 
-    <section class="section" aria-labelledby="featured-heading">
+    <section class="section section--alt" aria-labelledby="featured-heading">
       <div class="container">
         <div class="section-header">
+          <span class="eyebrow">From the menu</span>
           <h2 id="featured-heading">Customer favourites</h2>
           <p>The drinks and bakes our regulars come back for.</p>
         </div>
         <div id="featured-products" class="product-grid"></div>
+        <p class="section-footer"><a class="btn btn--primary" href="menu.html">View the full menu</a></p>
       </div>
     </section>
 
-    <section class="section section--alt" aria-labelledby="why-heading">
+    <section class="section" aria-labelledby="why-heading">
       <div class="container">
         <div class="section-header">
+          <span class="eyebrow">Why us</span>
           <h2 id="why-heading">Why Ember &amp; Bean?</h2>
         </div>
         <div class="feature-grid">
-          <article>
-            <div class="feature-icon" aria-hidden="true">🌱</div>
+          <article class="feature-card">
+            <div class="icon-badge" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 20c0-9 6-15 15-15 0 9-6 15-15 15z"/><path d="M5 20l9-9"/></svg>
+            </div>
             <h3>Ethically sourced</h3>
             <p>We buy directly from farms we know, paying fair prices for great beans.</p>
           </article>
-          <article>
-            <div class="feature-icon" aria-hidden="true">🔥</div>
+          <article class="feature-card">
+            <div class="icon-badge" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c1 4 6 6 6 11a6 6 0 0 1-12 0c0-3 2-5 3-7 1 2 2 3 3 3 1-2 0-5 0-7z"/></svg>
+            </div>
             <h3>Roasted weekly</h3>
             <p>Small batches roasted every week, so your cup is always fresh.</p>
           </article>
-          <article>
-            <div class="feature-icon" aria-hidden="true">🥐</div>
+          <article class="feature-card">
+            <div class="icon-badge" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 16c2-7 16-7 18 0-3-1-5 0-6 2-2-2-4-2-6 0-1-2-3-3-6-2z"/><path d="M9 11l1 4M15 11l-1 4"/></svg>
+            </div>
             <h3>Baked every morning</h3>
             <p>Pastries from our neighbourhood bakery, delivered warm each day.</p>
           </article>
@@ -88,13 +115,26 @@
       </div>
     </section>
 
-    <section class="section" aria-labelledby="reviews-heading">
+    <section class="section section--alt" aria-labelledby="reviews-heading">
       <div class="container">
         <div class="section-header">
+          <span class="eyebrow">Reviews</span>
           <h2 id="reviews-heading">What people are saying</h2>
-          <p><a href="reviews.html">Read all reviews</a></p>
+          <p><a class="link-arrow" href="reviews.html">Read all reviews →</a></p>
         </div>
         <div id="latest-reviews" class="review-list review-list--grid"></div>
+      </div>
+    </section>
+
+    <section class="section section--flush-bottom" aria-labelledby="cta-heading">
+      <div class="container">
+        <div class="cta-band">
+          <div>
+            <h2 id="cta-heading">Skip the queue</h2>
+            <p>Order ahead and pick up at a time that suits you.</p>
+          </div>
+          <a class="btn btn--primary" href="order.html">Order now</a>
+        </div>
       </div>
     </section>
   </main>
@@ -114,7 +154,7 @@
           <h2>Hours</h2>
           <ul>
             <li>Open daily</li>
-            <li>7:00 – 20:00</li>
+            <li>6:00 AM – midnight</li>
           </ul>
         </section>
       </div>

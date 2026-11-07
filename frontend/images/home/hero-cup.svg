@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 440" width="520" height="440">
+  <title>A cappuccino with latte art</title>
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="55%" r="50%">
+      <stop offset="0" stop-color="#c8782f" stop-opacity=".45"/>
+      <stop offset="1" stop-color="#c8782f" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="crema" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#c98a4b"/>
+      <stop offset="1" stop-color="#a8642c"/>
+    </linearGradient>
+  </defs>
+  <ellipse cx="260" cy="250" rx="250" ry="190" fill="url(#glow)"/>
+  <g fill="none" stroke="#fff" stroke-width="8" stroke-linecap="round" opacity=".5">
+    <path d="M215 150c-18-22 18-36 0-62"/>
+    <path d="M260 140c-18-22 18-36 0-62"/>
+    <path d="M305 150c-18-22 18-36 0-62"/>
+  </g>
+  <ellipse cx="260" cy="352" rx="210" ry="56" fill="#3b2418" opacity=".35"/>
+  <ellipse cx="260" cy="340" rx="200" ry="52" fill="#e9dccb"/>
+  <ellipse cx="260" cy="331" rx="200" ry="52" fill="#fff"/>
+  <ellipse cx="260" cy="331" rx="118" ry="24" fill="#efe6db"/>
+  <path d="M398 232c78-14 84 92-16 84" fill="none" stroke="#fff" stroke-width="24" stroke-linecap="round"/>
+  <path d="M398 232c78-14 84 92-16 84" fill="none" stroke="#efe6db" stroke-width="8" stroke-linecap="round" opacity=".7"/>
+  <path d="M110 214h300c0 98-60 150-150 150s-150-52-150-150z" fill="#fff"/>
+  <path d="M362 214h48c0 98-60 150-150 150 56-22 102-70 102-150z" fill="#efe6db"/>
+  <ellipse cx="260" cy="214" rx="150" ry="40" fill="#f3ece4"/>
+  <ellipse cx="260" cy="216" rx="134" ry="31" fill="url(#crema)"/>
+  <g fill="#fbf3e8">
+    <ellipse cx="260" cy="236" rx="56" ry="10"/>
+    <ellipse cx="260" cy="225" rx="46" ry="8.5"/>
+    <ellipse cx="260" cy="215" rx="36" ry="7"/>
+    <ellipse cx="260" cy="206" rx="26" ry="5.5"/>
+    <ellipse cx="260" cy="198" rx="15" ry="4"/>
+  </g>
+  <path d="M260 246v-52" stroke="url(#crema)" stroke-width="3" stroke-linecap="round"/>
+  <g>
+    <g transform="translate(58 392) rotate(-25)"><ellipse rx="17" ry="12" fill="#5c3a28"/><path d="M-14 0C-5-6 5 6 14 0" fill="none" stroke="#2b1a10" stroke-width="3" stroke-linecap="round"/></g>
+    <g transform="translate(96 414) rotate(18)"><ellipse rx="15" ry="11" fill="#4a2c1c"/><path d="M-12 0C-4-5 4 5 12 0" fill="none" stroke="#2b1a10" stroke-width="3" stroke-linecap="round"/></g>
+    <g transform="translate(448 398) rotate(32)"><ellipse rx="17" ry="12" fill="#5c3a28"/><path d="M-14 0C-5-6 5 6 14 0" fill="none" stroke="#2b1a10" stroke-width="3" stroke-linecap="round"/></g>
+    <g transform="translate(482 372) rotate(-12)"><ellipse rx="14" ry="10" fill="#4a2c1c"/><path d="M-11 0C-4-5 4 5 11 0" fill="none" stroke="#2b1a10" stroke-width="3" stroke-linecap="round"/></g>
+    <g transform="translate(30 360) rotate(40)"><ellipse rx="13" ry="9" fill="#4a2c1c"/><path d="M-10 0C-3-4 3 4 10 0" fill="none" stroke="#2b1a10" stroke-width="2.5" stroke-linecap="round"/></g>
+  </g>
+</svg>

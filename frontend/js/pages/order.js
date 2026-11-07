@@ -3,11 +3,14 @@
 import { api } from '../api.js';
 import { setupForm } from '../validation.js';
 import { escapeHtml, formatPrice, showPlaceholder } from '../ui.js';
-
-const OPEN_HOUR = 7;
-const CLOSE_HOUR = 20;
-const MIN_LEAD_MINUTES = 15;
-const MAX_DAYS_AHEAD = 7;
+import {
+  CAFE_TIME_ZONE_LABEL,
+  HOURS_LABEL,
+  OPEN_LABEL,
+  SLOT_MINUTES,
+  formatCafeTime as formatTime,
+  todaysPickupSlots,
+} from '../cafeTime.js';
 
 const form = document.getElementById('order-form');
 const clearButton = document.getElementById('clear-order');
@@ -16,13 +19,39 @@ const summaryList = document.getElementById('summary-items');
 const summaryTotal = document.getElementById('summary-total');
 const confirmation = document.getElementById('order-confirmation');
 const pickupInput = form.elements.pickupTime;
+const pickupHint = document.getElementById('pickupTime-hint');
+const currentTime = document.getElementById('current-time');
+const submitButton = form.querySelector('[type="submit"]');
 
 let products = [];
 
-// <input type="datetime-local"> needs "YYYY-MM-DDTHH:MM" in the user's local time.
-function toLocalInputValue(date) {
-  const pad = (n) => String(n).padStart(2, '0');
-  return `${date.getFullYear()}-${pad(date.getMonth() + 1)}-${pad(date.getDate())}T${pad(date.getHours())}:${pad(date.getMinutes())}`;
+// Live clock next to the pickup field, showing the café's time so customers can see how far
+// away each slot is.
+function updateClock() {
+  const now = new Date();
+  currentTime.textContent = `${formatTime(now)} (${CAFE_TIME_ZONE_LABEL})`;
+  currentTime.dateTime = now.toISOString();
+}
+
+// Fills the pickup drop-down. Option values are ISO timestamps, which is what the API expects.
+function renderPickupSlots() {
+  const slots = todaysPickupSlots();
+  const firstValue = slots[0]?.toISOString() ?? '';
+  if (pickupInput.options[1]?.value === firstValue && firstValue) return; // nothing changed
+
+  const selected = pickupInput.value;
+  if (slots.length === 0) {
+    pickupInput.innerHTML = '<option value="">No pickup times left today</option>';
+    pickupHint.textContent = `We're closed for online orders today. Ordering opens again at ${OPEN_LABEL} tomorrow.`;
+    submitButton.disabled = true;
+    return;
+  }
+  pickupHint.textContent = `Pickup is today only, every ${SLOT_MINUTES} minutes. We're open daily from ${HOURS_LABEL} (${CAFE_TIME_ZONE_LABEL}).`;
+  submitButton.disabled = products.length === 0; // stays disabled if the menu failed to load
+  pickupInput.innerHTML =
+    '<option value="">Choose a time…</option>' +
+    slots.map((s) => `<option value="${s.toISOString()}">${formatTime(s)}</option>`).join('');
+  if ([...pickupInput.options].some((option) => option.value === selected)) pickupInput.value = selected;
 }
 
 function selectedItems() {
@@ -65,27 +94,19 @@ function showConfirmation(order) {
   confirmation.hidden = false;
   confirmation.innerHTML = `
     <h2>Thank you! Your order is in.</h2>
-    <p>Order number <strong>#${order.id}</strong>. Pick it up on
-      <strong>${new Date(order.pickupTime).toLocaleString(undefined, { dateStyle: 'full', timeStyle: 'short' })}</strong>.</p>
+    <p>Order number <strong>#${order.id}</strong>. Pick it up today at
+      <strong>${formatTime(new Date(order.pickupTime))}</strong>.</p>
     <ul>${order.items.map((item) => `<li>${item.quantity} × ${escapeHtml(item.name)}: ${formatPrice(item.unitPrice * item.quantity)}</li>`).join('')}</ul>
     <p class="order-total"><span>Total</span><span>${formatPrice(order.total)}</span></p>
     <a class="btn btn--primary" href="order.html">Place another order</a>`;
   confirmation.scrollIntoView({ behavior: 'smooth' });
 }
 
-// HTML5 handles "required" and the min/max range; these rules add the shop's business logic.
+// HTML5 "required" makes sure a time is chosen; this rule catches a slot that went by
+// while the page was left open.
 const rules = {
-  pickupTime(value) {
-    const time = new Date(value);
-    if (time.getTime() < Date.now() + MIN_LEAD_MINUTES * 60 * 1000) {
-      return `Please allow at least ${MIN_LEAD_MINUTES} minutes for us to prepare your order.`;
-    }
-    const minutes = time.getHours() * 60 + time.getMinutes();
-    if (minutes < OPEN_HOUR * 60 || minutes > CLOSE_HOUR * 60 - 15) {
-      return `We're open ${OPEN_HOUR}:00 to ${CLOSE_HOUR}:00. Please choose a pickup time between ${OPEN_HOUR}:00 and ${CLOSE_HOUR - 1}:45.`;
-    }
-    return '';
-  },
+  pickupTime: (value) =>
+    new Date(value).getTime() < Date.now() ? 'That pickup time has passed. Please choose a later one.' : '',
 };
 
 const groupRules = {
@@ -98,12 +119,13 @@ try {
   updateSummary();
 } catch (err) {
   showPlaceholder(itemsContainer, `The menu couldn't be loaded: ${err.message}`, { error: true });
-  form.querySelector('[type="submit"]').disabled = true;
+  submitButton.disabled = true;
 }
 
-const now = new Date();
-pickupInput.min = toLocalInputValue(now);
-pickupInput.max = toLocalInputValue(new Date(now.getTime() + MAX_DAYS_AHEAD * 24 * 60 * 60 * 1000));
+renderPickupSlots();
+setInterval(renderPickupSlots, 60 * 1000); // drop slots that pass while the page is open
+updateClock();
+setInterval(updateClock, 1000); // checked every second so the minute changes on time
 
 itemsContainer.addEventListener('input', updateSummary);
 clearButton.addEventListener('click', () => {
@@ -120,7 +142,7 @@ setupForm(form, {
       customerName: form.elements.customerName.value,
       customerEmail: form.elements.customerEmail.value,
       customerPhone: form.elements.customerPhone.value,
-      pickupTime: new Date(pickupInput.value).toISOString(),
+      pickupTime: pickupInput.value,
       notes: form.elements.notes.value,
       items: selectedItems().map(({ product, quantity }) => ({ productId: product.id, quantity })),
     });

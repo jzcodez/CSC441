@@ -81,10 +81,12 @@
 
             <div class="form-field">
               <label for="pickupTime">Pickup time <span class="required" aria-hidden="true">*</span></label>
-              <input type="datetime-local" id="pickupTime" name="pickupTime" required
-                     data-range-message="Please choose a time within the next 7 days."
-                     aria-describedby="pickupTime-hint pickupTime-error">
-              <p id="pickupTime-hint" class="hint">We're open daily from 7:00 to 20:00.</p>
+              <!-- Options are today's remaining pickup times, filled in by js/pages/order.js -->
+              <select id="pickupTime" name="pickupTime" required aria-describedby="pickupTime-hint pickupTime-error">
+                <option value="">Choose a time…</option>
+              </select>
+              <p class="hint">Current time: <time id="current-time"></time></p>
+              <p id="pickupTime-hint" class="hint">Pickup is today only, every 15 minutes. We're open daily from 6:00 AM to midnight.</p>
               <p id="pickupTime-error" class="field-error" aria-live="polite"></p>
             </div>
 
@@ -127,7 +129,7 @@
           <h2>Hours</h2>
           <ul>
             <li>Open daily</li>
-            <li>7:00 – 20:00</li>
+            <li>6:00 AM – midnight</li>
           </ul>
         </section>
       </div>

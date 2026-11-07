@@ -3,6 +3,15 @@ import { api } from '../api.js';
 import { setupForm } from '../validation.js';
 
 const form = document.getElementById('contact-form');
+const messageInput = form.elements.message;
+const messageCount = document.getElementById('message-count');
+
+// Live character counter, so people can see how close they are to the limit.
+function updateCount() {
+  messageCount.textContent = `${messageInput.value.length} / ${messageInput.maxLength} characters`;
+}
+messageInput.addEventListener('input', updateCount);
+form.addEventListener('reset', () => setTimeout(updateCount)); // after the reset has cleared the field
 
 setupForm(form, {
   async onSubmit() {

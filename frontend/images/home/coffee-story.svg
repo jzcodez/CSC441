@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 460" width="600" height="460">
+  <title>A pour-over coffee maker, a bag of house blend beans and a cup of coffee on a wooden table</title>
+  <defs>
+    <linearGradient id="wall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f6e6d2"/>
+      <stop offset="1" stop-color="#e6c49c"/>
+    </linearGradient>
+    <linearGradient id="table" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#a8703f"/>
+      <stop offset="1" stop-color="#7a4b28"/>
+    </linearGradient>
+    <linearGradient id="brew" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8a5a33"/>
+      <stop offset="1" stop-color="#4a2c1c"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="600" height="460" fill="url(#wall)"/>
+  <circle cx="470" cy="90" r="130" fill="#fff" opacity=".22"/>
+  <rect x="40" y="70" width="120" height="90" rx="6" fill="#fff" opacity=".35"/>
+  <path d="M100 70v90M40 115h120" stroke="#e6c49c" stroke-width="4"/>
+
+  <rect y="338" width="600" height="122" fill="url(#table)"/>
+  <rect y="334" width="600" height="8" fill="#c08a55"/>
+  <g stroke="#6b3f20" stroke-width="2" opacity=".35" fill="none">
+    <path d="M0 372c120-6 240 6 360 0s180-4 240 0"/>
+    <path d="M0 410c140 6 260-6 380 0s160 4 220 0"/>
+  </g>
+
+  <!-- pour-over carafe -->
+  <ellipse cx="170" cy="342" rx="78" ry="10" fill="#3b2418" opacity=".25"/>
+  <path d="M150 196h40c56 50 66 128 -20 146c-86-18-76-96-20-146z" fill="url(#brew)"/>
+  <path d="M150 196h40c56 50 66 128 -20 146c-86-18-76-96-20-146z" fill="none" stroke="#fff" stroke-width="5" opacity=".9"/>
+  <path d="M110 92h120l-40 104h-40z" fill="#fff" opacity=".55" stroke="#fff" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M124 100h92l-34 86h-24z" fill="#fbf3e8"/>
+  <path d="M136 104h68l-8 20h-52z" fill="#6b3a1c"/>
+  <path d="M146 182h48v22h-48z" fill="#c8782f"/>
+  <path d="M170 204l-12 22M170 204l12 22" stroke="#a35f20" stroke-width="4" stroke-linecap="round"/>
+  <path d="M132 236c-14 30-14 64 6 88" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" opacity=".55"/>
+
+  <!-- bag of beans -->
+  <ellipse cx="365" cy="342" rx="72" ry="9" fill="#3b2418" opacity=".25"/>
+  <path d="M306 150h118l10 190h-138z" fill="#3b2418"/>
+  <path d="M306 150l10-34h98l10 34z" fill="#5c3a28"/>
+  <path d="M316 116h98" stroke="#7a4b28" stroke-width="4"/>
+  <rect x="322" y="196" width="86" height="100" rx="6" fill="#faf6f0"/>
+  <text x="365" y="240" text-anchor="middle" font-family="Georgia, serif" font-size="30" font-weight="bold" fill="#3b2418">E&amp;B</text>
+  <text x="365" y="264" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11" letter-spacing="2" fill="#a35f20">HOUSE BLEND</text>
+  <path d="M342 278h46" stroke="#c8782f" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- cup -->
+  <ellipse cx="500" cy="344" rx="70" ry="13" fill="#d9c7b2"/>
+  <ellipse cx="500" cy="339" rx="70" ry="13" fill="#fff"/>
+  <path d="M542 284c30-6 32 40-6 36" fill="none" stroke="#fff" stroke-width="10" stroke-linecap="round"/>
+  <path d="M450 270h100c0 44-18 68-50 68s-50-24-50-68z" fill="#fff"/>
+  <path d="M528 270h22c0 44-18 68-50 68 18-10 28-34 28-68z" fill="#efe6db"/>
+  <ellipse cx="500" cy="270" rx="50" ry="11" fill="#f3ece4"/>
+  <ellipse cx="500" cy="271" rx="43" ry="8" fill="#b9773d"/>
+  <path d="M500 278c-9-4-13-8-10-11 2-3 6-2 10 2 4-4 8-5 10-2 3 3-1 7-10 11z" fill="#fbf3e8"/>
+  <g fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" opacity=".7">
+    <path d="M488 246c-9-11 9-17 0-30"/>
+    <path d="M512 242c-9-11 9-17 0-30"/>
+  </g>
+
+  <!-- scattered beans -->
+  <g transform="translate(262 372) rotate(-20)"><ellipse rx="13" ry="9" fill="#4a2c1c"/><path d="M-10 0C-3-4 3 4 10 0" fill="none" stroke="#2b1a10" stroke-width="2.5" stroke-linecap="round"/></g>
+  <g transform="translate(288 392) rotate(25)"><ellipse rx="12" ry="8.5" fill="#5c3a28"/><path d="M-9 0C-3-4 3 4 9 0" fill="none" stroke="#2b1a10" stroke-width="2.5" stroke-linecap="round"/></g>
+  <g transform="translate(250 404) rotate(60)"><ellipse rx="11" ry="8" fill="#4a2c1c"/><path d="M-8 0C-3-3 3 3 8 0" fill="none" stroke="#2b1a10" stroke-width="2.5" stroke-linecap="round"/></g>
+  <g transform="translate(436 392) rotate(-35)"><ellipse rx="12" ry="8.5" fill="#5c3a28"/><path d="M-9 0C-3-4 3 4 9 0" fill="none" stroke="#2b1a10" stroke-width="2.5" stroke-linecap="round"/></g>
+  <g transform="translate(70 386) rotate(10)"><ellipse rx="12" ry="8.5" fill="#4a2c1c"/><path d="M-9 0C-3-4 3 4 9 0" fill="none" stroke="#2b1a10" stroke-width="2.5" stroke-linecap="round"/></g>
+</svg>

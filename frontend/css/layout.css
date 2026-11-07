@@ -83,6 +83,20 @@ main {
   background: var(--color-foam);
 }
 
+/* Sections that belong together visually, with less space between them. */
+.section--tight {
+  padding: var(--space-5) 0;
+}
+
+.section--tight + .section--tight {
+  padding-top: 0;
+}
+
+/* Last section before the footer: the footer's own top margin provides the spacing. */
+.section--flush-bottom {
+  padding-bottom: 0;
+}
+
 .section-header {
   text-align: center;
   max-width: 40rem;
@@ -139,6 +153,55 @@ main {
   justify-content: flex-start;
 }
 
+/* Home page hero: text on the left, illustration on the right. */
+.hero--split {
+  text-align: left;
+  padding: var(--space-5) 0;
+}
+
+.hero--split .container {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: var(--space-5);
+  align-items: center;
+}
+
+.hero--split p {
+  margin: 0 0 var(--space-4);
+}
+
+.hero--split .hero-actions {
+  justify-content: flex-start;
+}
+
+.hero-meta {
+  margin: var(--space-4) 0 0;
+  font-size: 0.95rem;
+  opacity: 0.8;
+}
+
+.hero-art img {
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+  margin-left: auto;
+}
+
+/* Image and text side by side. */
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-6);
+  align-items: center;
+}
+
+.split-media img {
+  width: 100%;
+  height: auto;
+  border-radius: calc(var(--radius) * 2);
+  box-shadow: 0 20px 40px rgba(59, 36, 24, 0.15);
+}
+
 .two-column {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -162,10 +225,16 @@ main {
   margin-top: var(--space-6);
 }
 
+/* Brand column takes the extra space; the last column sits flush with the right edge,
+   so the footer lines up with the container on both sides. */
 .footer-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--space-4);
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr) auto;
+  gap: var(--space-5);
+}
+
+.footer-grid > section:first-child p {
+  max-width: 24rem;
 }
 
 .site-footer h2 {
@@ -218,8 +287,31 @@ main {
 
   .two-column,
   .order-layout,
-  .footer-grid {
+  .footer-grid,
+  .split,
+  .hero--split .container {
     grid-template-columns: 1fr;
+  }
+
+  .split {
+    gap: var(--space-4);
+  }
+
+  .hero--split {
+    text-align: center;
+  }
+
+  .hero--split .container {
+    gap: var(--space-3);
+  }
+
+  .hero--split .hero-actions {
+    justify-content: center;
+  }
+
+  .hero-art img {
+    max-width: 340px;
+    margin: 0 auto;
   }
 
   .section {
