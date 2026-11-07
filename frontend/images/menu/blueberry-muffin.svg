@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <title>Blueberry Muffin</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f8ecd2"/>
+      <stop offset="1" stop-color="#e9cf9e"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#bg)"/>
+  <circle cx="320" cy="60" r="90" fill="#fff" opacity=".2"/>
+  <ellipse cx="200" cy="258" rx="110" ry="12" fill="#3b2418" opacity=".12"/>
+  <path d="M136 170h128l-16 80h-96z" fill="#c8782f"/>
+  <path d="M152 170l8 80M172 170l4 80M192 170l2 80M212 170l-2 80M232 170l-4 80M250 170l-8 80" stroke="#a35f20" stroke-width="4"/>
+  <path d="M124 176c-10-78 162-78 152 0z" fill="#d9a15c"/>
+  <path d="M124 176c-2-12 0-24 6-34 4 18 4 26-6 34z" fill="#c48a45"/>
+  <path d="M276 176c2-12 0-24-6-34-4 18-4 26 6 34z" fill="#c48a45"/>
+  <g fill="#f0c98a">
+    <circle cx="160" cy="138" r="5"/><circle cx="182" cy="124" r="4"/><circle cx="214" cy="120" r="5"/>
+    <circle cx="240" cy="134" r="4"/><circle cx="200" cy="146" r="4"/><circle cx="226" cy="156" r="5"/>
+    <circle cx="170" cy="160" r="4"/><circle cx="252" cy="158" r="4"/>
+  </g>
+  <g fill="#3d3f7a">
+    <circle cx="176" cy="142" r="8"/><circle cx="222" cy="136" r="8"/><circle cx="200" cy="124" r="7"/>
+    <circle cx="246" cy="150" r="7"/><circle cx="152" cy="156" r="7"/><circle cx="204" cy="162" r="7"/>
+  </g>
+  <g fill="#fff" opacity=".6">
+    <circle cx="173" cy="139" r="2.2"/><circle cx="219" cy="133" r="2.2"/><circle cx="197" cy="121" r="2"/>
+    <circle cx="243" cy="147" r="2"/><circle cx="149" cy="153" r="2"/><circle cx="201" cy="159" r="2"/>
+  </g>
+</svg>

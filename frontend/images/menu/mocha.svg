@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <title>Mocha</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f6e6d2"/>
+      <stop offset="1" stop-color="#e6c49c"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#bg)"/>
+  <circle cx="320" cy="60" r="90" fill="#fff" opacity=".18"/>
+  <ellipse cx="200" cy="256" rx="140" ry="12" fill="#3b2418" opacity=".12"/>
+  <path d="M262 140c46-2 46 72 0 70" fill="none" stroke="#5c3a28" stroke-width="16" stroke-linecap="round"/>
+  <path d="M130 124h140v94c0 18-14 30-32 30h-76c-18 0-32-12-32-30z" fill="#5c3a28"/>
+  <path d="M244 124h26v94c0 18-14 30-32 30h-6c10-6 12-16 12-30z" fill="#3b2418"/>
+  <ellipse cx="200" cy="124" rx="70" ry="13" fill="#4a2c1c"/>
+  <g fill="#fff">
+    <circle cx="164" cy="116" r="20"/>
+    <circle cx="190" cy="104" r="24"/>
+    <circle cx="218" cy="108" r="22"/>
+    <circle cx="238" cy="118" r="17"/>
+    <circle cx="202" cy="84" r="18"/>
+  </g>
+  <path d="M158 112l14-12 12 14 14-16 12 14 14-14 12 12" fill="none" stroke="#5a2e17" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <g fill="#7b4a2d">
+    <circle cx="186" cy="88" r="2.5"/><circle cx="208" cy="80" r="2.5"/><circle cx="222" cy="96" r="2.5"/>
+    <circle cx="176" cy="102" r="2.5"/><circle cx="200" cy="96" r="2.5"/>
+  </g>
+  <g transform="rotate(-14 318 228)">
+    <rect x="292" y="210" width="52" height="34" rx="4" fill="#5a2e17"/>
+    <path d="M309 210v34M327 210v34M292 227h52" stroke="#3b1d0e" stroke-width="3"/>
+  </g>
+  <path d="M152 170h96" stroke="#fff" stroke-width="5" stroke-linecap="round" opacity=".25"/>
+</svg>

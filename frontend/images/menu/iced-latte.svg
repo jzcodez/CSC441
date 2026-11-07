@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <title>Iced Latte</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e6f0ef"/>
+      <stop offset="1" stop-color="#bcd6d4"/>
+    </linearGradient>
+    <linearGradient id="latte" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#6b3a1c"/>
+      <stop offset=".35" stop-color="#a8703f"/>
+      <stop offset=".6" stop-color="#e2c7a4"/>
+      <stop offset="1" stop-color="#f3e6d4"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#bg)"/>
+  <circle cx="320" cy="60" r="90" fill="#fff" opacity=".25"/>
+  <ellipse cx="200" cy="256" rx="90" ry="11" fill="#3b2418" opacity=".12"/>
+  <rect x="220" y="26" width="11" height="140" rx="5.5" fill="#fff" transform="rotate(10 225 96)"/>
+  <path d="M222 40h9M222 60h9M222 80h9" stroke="#c8782f" stroke-width="5" transform="rotate(10 225 96)"/>
+  <path d="M150 100h100l-8 132h-84z" fill="url(#latte)"/>
+  <g fill="#fff" opacity=".5">
+    <rect x="162" y="104" width="32" height="28" rx="6" transform="rotate(-10 178 118)"/>
+    <rect x="206" y="108" width="30" height="27" rx="6" transform="rotate(12 221 121)"/>
+    <rect x="182" y="136" width="30" height="26" rx="6" transform="rotate(4 197 149)"/>
+  </g>
+  <path d="M144 74h112l-10 164h-92z" fill="#fff" opacity=".2" stroke="#fff" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M156 86l8 140" stroke="#fff" stroke-width="5" stroke-linecap="round" opacity=".55"/>
+</svg>

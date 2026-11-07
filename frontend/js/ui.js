@@ -14,10 +14,13 @@ export function renderStars(rating) {
   return `<span class="stars" role="img" aria-label="${rating} out of 5 stars">${'★'.repeat(filled)}${'☆'.repeat(5 - filled)}</span>`;
 }
 
+// Shows the product's picture over its first letter, so the letter remains as a fallback
+// when a product has no picture or the image file fails to load.
 export function productImage(product) {
-  return `<div class="product-image" aria-hidden="true">${
-    product.imageUrl ? `<img src="${escapeHtml(product.imageUrl)}" alt="">` : escapeHtml(product.name.charAt(0))
-  }</div>`;
+  const image = product.imageUrl
+    ? `<img src="${escapeHtml(product.imageUrl)}" alt="" onerror="this.remove()">`
+    : '';
+  return `<div class="product-image" aria-hidden="true">${escapeHtml(product.name.charAt(0))}${image}</div>`;
 }
 
 export function productCard(product) {

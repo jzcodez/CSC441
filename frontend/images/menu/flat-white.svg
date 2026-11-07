@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <title>Flat White</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f6e6d2"/>
+      <stop offset="1" stop-color="#e6c49c"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#bg)"/>
+  <circle cx="320" cy="60" r="90" fill="#fff" opacity=".18"/>
+  <ellipse cx="200" cy="260" rx="130" ry="12" fill="#3b2418" opacity=".12"/>
+  <g fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" opacity=".75">
+    <path d="M188 112c-12-14 12-24 0-40"/>
+    <path d="M214 108c-12-14 12-24 0-40"/>
+  </g>
+  <ellipse cx="200" cy="243" rx="116" ry="20" fill="#d9c7b2"/>
+  <ellipse cx="200" cy="237" rx="116" ry="20" fill="#fff"/>
+  <ellipse cx="200" cy="237" rx="62" ry="9" fill="#efe6db"/>
+  <path d="M264 162c38-6 42 46-6 42" fill="none" stroke="#fff" stroke-width="13" stroke-linecap="round"/>
+  <path d="M132 142h136c0 54-24 88-68 88s-68-34-68-88z" fill="#fff"/>
+  <path d="M242 142h26c0 54-24 88-68 88 28-12 42-44 42-88z" fill="#efe6db"/>
+  <ellipse cx="200" cy="142" rx="68" ry="15" fill="#f3ece4"/>
+  <ellipse cx="200" cy="143" rx="60" ry="11" fill="#9c5f2c"/>
+  <g fill="#f6ead9">
+    <ellipse cx="200" cy="148" rx="24" ry="5"/>
+    <ellipse cx="200" cy="142" rx="18" ry="4"/>
+    <ellipse cx="200" cy="137" rx="12" ry="3"/>
+  </g>
+  <path d="M200 152v-18" stroke="#9c5f2c" stroke-width="2" stroke-linecap="round"/>
+</svg>

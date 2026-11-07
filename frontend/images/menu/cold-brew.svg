@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <title>Cold Brew</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e6f0ef"/>
+      <stop offset="1" stop-color="#bcd6d4"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#bg)"/>
+  <circle cx="320" cy="60" r="90" fill="#fff" opacity=".25"/>
+  <ellipse cx="200" cy="256" rx="90" ry="11" fill="#3b2418" opacity=".12"/>
+  <rect x="222" y="28" width="11" height="140" rx="5.5" fill="#c8782f" transform="rotate(12 227 98)"/>
+  <path d="M150 104h100l-8 128h-84z" fill="#3b2418"/>
+  <path d="M150 104h100l-1 14h-98z" fill="#5c3a28"/>
+  <g fill="#fff" opacity=".5">
+    <rect x="160" y="96" width="34" height="30" rx="6" transform="rotate(-12 177 111)"/>
+    <rect x="204" y="100" width="32" height="28" rx="6" transform="rotate(10 220 114)"/>
+    <rect x="178" y="128" width="30" height="27" rx="6" transform="rotate(6 193 141)"/>
+  </g>
+  <path d="M144 74h112l-10 164h-92z" fill="#fff" opacity=".2" stroke="#fff" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M156 86l8 140" stroke="#fff" stroke-width="5" stroke-linecap="round" opacity=".55"/>
+  <g fill="#fff" opacity=".7">
+    <circle cx="240" cy="150" r="3"/><circle cx="236" cy="176" r="2.5"/><circle cx="168" cy="196" r="2.5"/>
+  </g>
+</svg>

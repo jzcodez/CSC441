@@ -18,3 +18,6 @@ INSERT INTO products (id, category_id, name, slug, description, price, is_featur
   (10, 3, 'Butter Croissant',        'butter-croissant',  'Flaky, golden and made with real butter.',                                           3.25, TRUE),
   (11, 3, 'Blueberry Muffin',        'blueberry-muffin',  'Soft and moist, packed with blueberries and topped with crumble.',                  3.00, FALSE),
   (12, 3, 'Chocolate Chip Cookie',   'chocolate-chip-cookie', 'Chewy in the middle, crisp at the edges.',                                       2.50, FALSE);
+
+-- Each product's picture is frontend/images/menu/<slug>.svg.
+UPDATE products SET image_url = CONCAT('/images/menu/', slug, '.svg');

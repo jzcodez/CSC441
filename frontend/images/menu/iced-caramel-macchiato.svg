@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <title>Iced Caramel Macchiato</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e6f0ef"/>
+      <stop offset="1" stop-color="#bcd6d4"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#bg)"/>
+  <circle cx="320" cy="60" r="90" fill="#fff" opacity=".25"/>
+  <ellipse cx="200" cy="258" rx="90" ry="11" fill="#3b2418" opacity=".12"/>
+  <rect x="214" y="14" width="11" height="120" rx="5.5" fill="#3b2418" transform="rotate(8 219 74)"/>
+  <path d="M154 216h92l-2 30h-88z" fill="#d39a4d"/>
+  <path d="M152 140h96l-2 76h-92z" fill="#f3e6d4"/>
+  <path d="M150 104h100l-2 36h-96z" fill="#7a4522"/>
+  <path d="M150 104h100l-1 10h-98z" fill="#a8642c"/>
+  <g fill="#fff" opacity=".45">
+    <rect x="164" y="142" width="30" height="27" rx="6" transform="rotate(-10 179 155)"/>
+    <rect x="206" y="150" width="30" height="26" rx="6" transform="rotate(12 221 163)"/>
+  </g>
+  <path d="M148 98h104l-12 150h-80z" fill="#fff" opacity=".2" stroke="#fff" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M142 98a58 40 0 0 1 116 0z" fill="#fff" opacity=".35" stroke="#fff" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M138 96h124" stroke="#fff" stroke-width="7" stroke-linecap="round"/>
+  <path d="M158 112l18 8 18-8 18 8 18-8 18 8M162 124l18-8 18 8 18-8 18 8 14-6" fill="none" stroke="#d8913a" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M160 110l8 128" stroke="#fff" stroke-width="5" stroke-linecap="round" opacity=".5"/>
+</svg>

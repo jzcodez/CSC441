@@ -46,6 +46,14 @@ Even though MongoDB doesn't require a schema, both collections use `$jsonSchema`
 
 `reviews.productId` refers to `products.id` in MySQL. There is no foreign key across two different databases, so the backend enforces it instead: `reviewService.createReview` checks that the product exists in MySQL before saving the review. `productName` is stored on the review too, so the reviews list can be shown without querying MySQL.
 
+## Changing a live database: migrations
+
+`schema.sql` and `seed.sql` rebuild everything from scratch, so they are only for new databases. Changes to a database that already holds real orders go in [sql/migrations/](sql/migrations/) as small, numbered SQL files that never delete data. Each one is run once against the live database (for example in MySQL Workbench), and `schema.sql`/`seed.sql` are updated to match, so fresh setups end up identical.
+
+| Migration | What it does |
+|---|---|
+| [001_add_menu_images.sql](sql/migrations/001_add_menu_images.sql) | Sets each product's `image_url` to its illustration in `frontend/images/menu/` |
+
 ## Setting up
 
 From the `backend/` folder, with `.env` filled in:

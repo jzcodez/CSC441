@@ -66,6 +66,8 @@
 
 /* Placeholder until real photos are added to frontend/images/. */
 .product-image {
+  position: relative;
+  overflow: hidden;
   aspect-ratio: 4 / 3;
   display: grid;
   place-items: center;
@@ -76,6 +78,8 @@
 }
 
 .product-image img {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;

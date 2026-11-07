@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <title>Chocolate Chip Cookie</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f8ecd2"/>
+      <stop offset="1" stop-color="#e9cf9e"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#bg)"/>
+  <circle cx="320" cy="60" r="90" fill="#fff" opacity=".2"/>
+  <ellipse cx="200" cy="252" rx="110" ry="14" fill="#3b2418" opacity=".14"/>
+  <circle cx="200" cy="155" r="92" fill="#c48a45"/>
+  <circle cx="200" cy="150" r="88" fill="#d9a35f"/>
+  <circle cx="196" cy="146" r="70" fill="#e2b06c" opacity=".6"/>
+  <g fill="#4a2614">
+    <path d="M150 110l12-4 6 10-8 8-11-3z"/>
+    <path d="M206 96l13 0 4 11-10 7-9-6z"/>
+    <path d="M246 128l12 2 2 12-11 5-7-9z"/>
+    <path d="M178 150l12-3 7 10-8 9-11-4z"/>
+    <path d="M226 176l12 0 4 11-10 7-9-7z"/>
+    <path d="M150 190l12-2 5 11-9 8-10-5z"/>
+    <path d="M196 206l11-3 6 9-8 8-10-4z"/>
+    <path d="M128 148l9-3 5 8-7 6-8-3z"/>
+  </g>
+  <g fill="#b97c3a">
+    <circle cx="300" cy="226" r="6"/><circle cx="314" cy="236" r="4"/><circle cx="96" cy="230" r="5"/>
+  </g>
+  <path d="M232 230c22-10 38-28 46-50" fill="none" stroke="#b97c3a" stroke-width="4" stroke-linecap="round" opacity=".6"/>
+</svg>

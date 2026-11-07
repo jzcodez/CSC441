@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <title>Butter Croissant</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f8ecd2"/>
+      <stop offset="1" stop-color="#e9cf9e"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#bg)"/>
+  <circle cx="320" cy="60" r="90" fill="#fff" opacity=".2"/>
+  <ellipse cx="200" cy="236" rx="160" ry="26" fill="#d9c7b2"/>
+  <ellipse cx="200" cy="230" rx="160" ry="26" fill="#fff"/>
+  <ellipse cx="200" cy="230" rx="110" ry="15" fill="#f3ece4"/>
+  <g stroke="#b56a24" stroke-width="3">
+    <ellipse cx="104" cy="202" rx="30" ry="18" fill="#cf8333" transform="rotate(-38 104 202)"/>
+    <ellipse cx="296" cy="202" rx="30" ry="18" fill="#cf8333" transform="rotate(38 296 202)"/>
+    <ellipse cx="146" cy="178" rx="42" ry="32" fill="#d98f3c" transform="rotate(-24 146 178)"/>
+    <ellipse cx="254" cy="178" rx="42" ry="32" fill="#d98f3c" transform="rotate(24 254 178)"/>
+    <ellipse cx="200" cy="164" rx="50" ry="42" fill="#e4a24e"/>
+  </g>
+  <g fill="none" stroke="#f2c27c" stroke-width="5" stroke-linecap="round" opacity=".8">
+    <path d="M180 140c12-8 28-8 40 0"/>
+    <path d="M128 162c8-10 20-14 32-12"/>
+    <path d="M240 150c12-2 24 2 32 12"/>
+    <path d="M92 194c4-8 12-12 20-12"/>
+    <path d="M288 182c8 0 16 4 20 12"/>
+  </g>
+</svg>
